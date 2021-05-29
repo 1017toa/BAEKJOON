@@ -1,0 +1,8 @@
+arr = []
+while True:
+    n = int(input())
+    arr.append(n)
+    if len(arr) == 9:
+        print(max(arr))
+        print(arr.index(max(arr))+1)
+        break
