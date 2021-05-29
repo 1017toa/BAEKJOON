@@ -1,0 +1,8 @@
+arr = []
+a = 0
+for i in range(10):
+    arr.append(int(input()) % 42)
+    if arr.count(arr[i]) > 1:
+        a = a + 1
+
+print(len(arr)-a)
