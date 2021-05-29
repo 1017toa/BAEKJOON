@@ -1,0 +1,12 @@
+s = list(str(input()))
+abc = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+abcins = []
+for i in range(len(abc)):
+    for ii in range(len(s)):
+        if abc[i] == s[ii]:
+            abcins.append(s.index(abc[i]))
+            if abcins.count(s.index(abc[i])) > 1:
+                abcins.remove(s.index(abc[i]))
+    if abc[i] not in s:
+        abcins.append(-1)
+print(*abcins)
