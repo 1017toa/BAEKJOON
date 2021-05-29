@@ -1,0 +1,13 @@
+def hansoo(n):
+    if n <= 99:
+        return n
+    else:
+        hs = []
+        for i in range(100, n+1):
+            a = list(str(i))
+            if int(a[0]) - int(a[1]) == int(a[1]) - int(a[2]):
+                hs.append(i)
+        return len(hs) + 99
+
+
+print(hansoo(int(input())))
