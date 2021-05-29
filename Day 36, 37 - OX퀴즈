@@ -1,0 +1,21 @@
+n = int(input())
+arr = []
+for i in range(n):
+    arr.append(list((input())))
+for i in range(n):
+    s = []
+    for l in range(len(arr[i])):
+        if arr[i][l] == 'O':
+            s.append(1)
+        else:
+            s.append(0)
+    num=0
+    num2=1
+    for a in range(len(arr[i])):
+        num += 1
+        if num > 2:
+            num2 += 1
+        for b in range(1, len(s)):
+            if s[b] == num2 and s[b - 1] == num:
+                s[b] = num+1
+    print(sum(s))
