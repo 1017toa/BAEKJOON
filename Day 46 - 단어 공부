@@ -1,0 +1,8 @@
+word = list(input().upper())
+a = []
+for i in range(len(word)):
+    a.append(word.count(word[i]))
+if max(a) < a.count(max(a)):
+    print('?')
+else:
+    print(word[a.index(max(a))])
