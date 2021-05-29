@@ -1,0 +1,7 @@
+t = int(input())
+for i in range(t):
+    s = list(map(str, input()))
+    p = []
+    for ii in range(2, len(s)):
+        p.append(s[ii]*int(s[0]))
+    print("".join(p))
