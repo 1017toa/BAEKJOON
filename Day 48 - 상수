@@ -1,0 +1,11 @@
+a, b = input().split()
+c = list(str(a))
+d = list(str(b))
+c.reverse()
+d.reverse()
+e = int("".join(c))
+f = int("".join(d))
+if e > f:
+    print(e)
+else:
+    print(f)
