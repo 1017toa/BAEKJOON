@@ -1,0 +1,12 @@
+al = list(input())
+dial = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+sum = 0
+for i in range(len(al)):
+    for ii in range(len(dial)):
+        if al[i] != 'Z':
+            if al[i] == dial[ii]:
+                sum += ii // 3 + 3
+        elif al[i] == 'Z':
+            if al[i] == dial[ii]:
+                sum += ii // 3 + 2
+print(sum)
