@@ -1,0 +1,12 @@
+import math
+t = int(input())
+for i in range(t):
+    h, w, n = map(int, input().split())
+    floor = n - n // h * h
+    if floor == 0:
+        floor = h
+    room = math.ceil(n / h)
+    if room < 10:
+        print(f'{floor}0{room}')
+    else:
+        print(f'{floor}{room}')
