@@ -1,0 +1,17 @@
+def d(n):
+    a = 0
+    list1 = list(str(n))
+    for pattern in list1:
+        a += int(pattern)
+    a += n
+    return a
+
+def self_num():
+    not_self_num = set()
+    for i in range(10000):
+        not_self_num.add(d(i+1))
+    self_number = set([i+1 for i in range(10000)]) - not_self_num
+    self_number_list = list(self_number)
+    self_number_list.sort()
+    for pattern in self_number_list:
+        print(pattern)
