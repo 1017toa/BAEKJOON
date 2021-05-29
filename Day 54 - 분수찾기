@@ -1,0 +1,16 @@
+N = int(input())
+
+b = 1
+
+if N // 1 == 1:
+  print('1/1')
+else:
+  while True:
+    N -= b
+    if N <= 0:
+      if b % 2 == 0:
+        print(f'{N+b}/{b-(N+b)+1}')
+      else:
+        print(f'{b-(N+b)+1}/{N+b}')
+      break
+    b += 1
