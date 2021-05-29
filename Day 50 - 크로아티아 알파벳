@@ -1,0 +1,18 @@
+word = list(input())
+word2 = ''.join(word)
+al = 'abcdefghijklmnopqrstuvwxyz'
+cro = ['c=','c-','dz=','d-','lj','nj','s=','z=']
+op = 0
+for i in range(len(word)):
+    for ii in range(len(al)):
+        if word[i] == al[ii]:
+            op += 1
+    if word[i] == '=':
+        op += 1
+    if word[i] == '-':
+        op += 1
+for i in range(len(cro)):
+    if cro[i] in word2:
+        op -= word2.count(cro[i])
+
+print(op)
