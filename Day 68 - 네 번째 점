@@ -1,0 +1,14 @@
+lo1a, lo1b = map(int,input().split())
+lo2a, lo2b = map(int,input().split())
+lo3a, lo3b = map(int,input().split())
+a = [lo1a,lo2a,lo3a]
+b = [lo1b,lo2b,lo3b]
+lo4a = 0
+lo4b = 0
+for i in range(len(a)):
+    if a.count(a[i]) == 1:
+        lo4a = a[i]
+    if b.count(b[i]) == 1:
+        lo4b = b[i]
+
+print(lo4a, lo4b)
