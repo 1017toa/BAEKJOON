@@ -1,0 +1,12 @@
+num = int(input())
+
+while True:
+    bb = 0
+    for i in range(2+bb, num+1):
+        if num % i == 0:
+            print(i)
+            num = num // i
+            break
+    bb += 1
+    if bb == num:
+        break
