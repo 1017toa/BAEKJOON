@@ -1,0 +1,13 @@
+N = int(input())
+i = 666
+jongmal = []
+while True:
+    if '666' in str(i):
+        jongmal.append(i)
+    if i < 5000:
+        i += 1000
+    else:
+        i += 1
+    if len(jongmal) == N:
+        break
+print(jongmal[N-1])
