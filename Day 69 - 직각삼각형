@@ -1,0 +1,12 @@
+while True:
+    a = list(map(int,input().split()))
+    d = 0
+    if a[0] == 0:
+        break
+    for i in range(len(a)):
+        if a[i] != max(a):
+            d += a[i]*a[i]
+    if max(a)*max(a) == d:
+        print('right')
+    else:
+        print('wrong')
