@@ -1,0 +1,21 @@
+def bhh (a):
+    b = str(a)
+    for i in range(len(b)):
+        a += int(b[i])
+    return a
+
+n = int(input())
+if n > 20:
+    m = n - (len(str(n))*9)
+else:
+    m = 0
+dap = []
+for i in range(m, n):
+    if bhh(i) == n:
+        dap.append(i)
+        break
+
+if len(dap) == 0:
+    print(0)
+else:
+    print(dap[0])
