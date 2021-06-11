@@ -1,0 +1,10 @@
+N, M = map(int,input().split())
+card = list(map(int, input().split()))
+hap = []
+for i in range(N):
+    for ii in range(N):
+        for iii in range(N):
+            if ii != i and ii != iii and iii != i :
+                if card[i]+card[ii]+card[iii] <= M:
+                    hap.append(card[i]+card[ii]+card[iii])
+print(max(hap))
