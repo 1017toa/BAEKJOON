@@ -1,0 +1,12 @@
+import sys
+input = sys.stdin.readline
+
+t = int(input())
+a = list(map(int, input().split()))
+for i in range(len(a)):
+    so = []
+    for ii in range(1, a[i]+1):
+        so.append(a[i] % ii)
+    if  so.count(0) != 2:
+        t -= 1
+print(t)
