@@ -1,0 +1,19 @@
+N, M = map(int,input().split())
+board = []
+for i in range(N):
+    board.append(list(map(str, input())))
+for i in range(N):
+    for ii in range(M):
+        if ii == 0 and i != 0:
+            if board[i][ii] == board[i-1][ii]:
+                board[i][ii] = 1
+        elif ii != 0 and ii != M-1:
+            if board[i][ii] == board[i][ii-1] == board[i][ii+1]:
+                board[i][ii] = 1
+cnt = []
+for i in range(N-8):
+    c = 0
+    for i2 in range(i, 8+i):
+        c += board[i2].count(1)
+    cnt.append(c)
+print(cnt)
