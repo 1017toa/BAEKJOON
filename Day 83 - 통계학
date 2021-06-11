@@ -1,0 +1,25 @@
+import sys
+input = sys.stdin.readline
+n = int(input())
+arr = []
+arr2 = []
+for i in range(n):
+    arr.append(int(input()))
+arr.sort()
+for i in range(n):
+    arr2.append(arr.count(arr[i]))
+print(round(sum(arr)/n))
+print(arr[round(n/2)])
+if arr2.count(max(arr2)) == max(arr2):
+    print(arr[arr2.index(max(arr2))])
+elif max(arr2) == 1:
+    print(arr[1])
+else:
+    cnt = 0
+    for i in range(n):
+        if arr2[i] == max(arr2):
+            cnt += 1
+        if cnt > max(arr2):
+            print(arr[i])
+            break
+print(arr[-1]-arr[0])
