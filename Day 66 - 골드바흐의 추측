@@ -1,0 +1,40 @@
+import sys
+def c(n):
+    d=[True]*n
+    h=int(n**0.5)
+    for i in range(2,h+1):
+        if d[i]==True:
+            for j in range(i+i,n,i):
+                d[j]=False
+
+    return [i for i in range(2,n) if d[i]==True]
+
+q=[True]*10000
+h=int(10000**0.5)
+for i in range(2,h+1):
+    if q[i]==True:
+        for j in range(i+i,10000,i):
+            q[j]=False
+q[0]=False
+q[1]=False
+
+a=int(sys.stdin.readline())
+for j in range(0,a):
+    b=int(sys.stdin.readline())
+
+    f = c(b+1)
+    d = []
+    for k in f:
+        d.append(k)
+    d.reverse()
+    w=b
+    for k in d:
+        g=b-k
+
+        if q[g] == True:
+            m = k-g
+            if 0 <= m and k>=g:
+                w = m
+                x = k
+                y = g
+    print(f'{y} {x}')
