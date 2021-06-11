@@ -1,0 +1,14 @@
+N = int(input())
+dung = []
+rank = []
+for i in range(N):
+    a, b = map(int, input().split())
+    dung.append([a, b])
+for i in range(N):
+    ranking = 1
+    for ii in range(N):
+        if i != ii:
+            if dung[i][0] < dung[ii][0] and dung[i][1] < dung[ii][1]:
+                ranking += 1
+    rank.append(ranking)
+print(*rank)
