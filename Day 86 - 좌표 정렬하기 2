@@ -1,0 +1,14 @@
+n = int(input())
+arr = []
+for i in range(n):
+    arr.append(list(map(int,input().split())))
+for i in range(n-1):
+    for ii in range(n-1-i):
+        a = arr[ii]
+        b = arr[ii + 1]
+        if arr[ii][1] > arr[ii+1][1]:
+            arr[ii] = b
+            arr[ii+1] = a
+
+for i in range(n):
+    print(*arr[i])
